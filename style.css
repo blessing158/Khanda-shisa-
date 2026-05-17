@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    overflow:hidden;
+    font-family:'Orbitron', sans-serif;
+    color:#00f7ff;
+}
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at center,#001f2f,#000000);
+}
+
+.dashboard{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+h1{
+    font-size:100px;
+    text-shadow:0 0 20px #00f7ff;
+}
+
+p{
+    color:white;
+    margin-top:10px;
+    font-size:22px;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 40px;
+    background:#00f7ff;
+    color:black;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-family:'Orbitron';
+    transition:0.3s;
+}
+
+button:hover{
+    box-shadow:0 0 20px #00f7ff;
+    transform:scale(1.05);
+}
+
+.rings{
+    position:absolute;
+    border:2px solid #00f7ff;
+    border-radius:50%;
+}
+
+.ring1{
+    width:300px;
+    height:300px;
+    top:-90px;
+    left:-70px;
+    animation:spin 10s linear infinite;
+}
+
+.ring2{
+    width:500px;
+    height:500px;
+    top:-190px;
+    left:-170px;
+    animation:spinReverse 14s linear infinite;
+}
+
+.login-box{
+    position:absolute;
+    bottom:50px;
+    right:50px;
+    width:300px;
+    padding:30px;
+    border:1px solid #00f7ff;
+    border-radius:15px;
+    background:rgba(0,0,0,0.6);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+.login-box h2{
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    background:black;
+    border:1px solid #00f7ff;
+    color:white;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spinReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+}
